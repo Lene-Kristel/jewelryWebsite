@@ -23,3 +23,32 @@ h1{
     text-align: right;
     padding-right: 50px;
 }
+h2{
+    text-align: center;
+}
+#menu{
+    padding-right: 20px;
+    border: 1px solid lightslategrey;
+    box-shadow: 1px 1px 4px gray;
+    text-align: center;
+    font-size: 30px;
+    width: 600px;
+    position: absolute;
+    margin-left: 25%;   
+}
+h6{
+    text-align: center;
+}
+a:link{
+    text-decoration: none;
+}
+a:link{
+    color: rgb(245, 245, 245,0.8);
+}
+a:visited{
+    color: rgb(245, 245, 245,0.8);
+}
+a:hover{
+    background-color: rgb(255, 215, 0,0.7);
+    color:black;
+}
