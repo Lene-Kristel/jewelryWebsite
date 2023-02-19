@@ -1,54 +1,71 @@
-p {
-    text-indent: 50px;
-    text-align: justify;
-    font-size: 30px;
-
-}
-#interface{
-    background-color: black;
-}
+@charset "UTH-8";
 *{
-    margin:0px;
-    color: rgb(245, 245, 245,0.8);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#interface{
+    background-color: white;
 }
 #image1{
     width: 100%;
     height: 500px;
 }
 h1{
-    font-family: 'Estonia', cursive;
-    color: white;
+    font-family: 'Estonia', cursive;    
     font-size: 140px;
     color: rgb(255, 215, 0,0.7);
     text-align: right;
     padding-right: 50px;
+    margin: 0;
 }
 h2{
     text-align: center;
 }
 #menu{
-    padding-right: 20px;
-    border: 1px solid lightslategrey;
-    box-shadow: 1px 1px 4px gray;
     text-align: center;
     font-size: 30px;
-    width: 600px;
-    position: absolute;
-    margin-left: 25%;   
+    width: 100%;
+    position: relative;   
 }
 h6{
     text-align: center;
 }
 a:link{
     text-decoration: none;
-}
-a:link{
-    color: rgb(245, 245, 245,0.8);
+    color: gray
 }
 a:visited{
-    color: rgb(245, 245, 245,0.8);
+    color: gray
 }
 a:hover{
-    background-color: rgb(255, 215, 0,0.7);
-    color:black;
+    background-color: lightgray;
+    color: goldenrod;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    font-style: bold;
+    transition: 1s;
+    border-radius: 5%;
+}
+figure.foto-legenda{
+    position: relative;
+    box-shadow: 1px 1px 2px white;
+}
+figure.foto-legenda img{
+    width: 100%;
+    height: 100%;
+}
+figure.foto-legenda figcaption{
+    position: absolute;
+    top: 0;
+    padding: 15% 13%;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+    opacity: 0;
+}
+figure.foto-legenda figcaption:hover{
+    opacity: 1;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
 }

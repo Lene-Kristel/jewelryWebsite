@@ -1,0 +1,18 @@
+#chatbot{
+    position: relative;
+    left: 30%;  
+}
+
+#h2cont{
+    color:gray;
+}
+#formcontato{
+    color: black;
+    text-align: center;  
+}
+#cont{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
