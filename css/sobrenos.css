@@ -1,0 +1,60 @@
+@charset "UTH-8";
+
+.div-left{
+    float: left;
+    width: 50%;
+    height: 25%;
+    margin-left: 30px;
+}
+.image-left{
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 2px gray; 
+    
+}
+.texto-direita{
+    float: right;
+    color: gray;
+    padding-left: 10px;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 30px;
+    font-size: 20px;
+    font-style: italic;
+    text-indent: 20px;
+    width: 40%;
+    text-align: justify;
+}
+.texto-esquerda{
+    float: left;
+    width: 40%;
+    margin-top: 80px;;
+    margin-right: 80%;
+    margin-left: 30px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-style: italic;
+    text-indent: 20px;
+    text-align: justify;
+    color: gray;
+}
+.div-right{
+    float: right;
+    flex-direction:row-reverse;
+    width: 50%;
+    position: absolute;
+}
+.image-right{
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 2px gray;
+    margin-top: 75%;
+    margin-left: 94%;
+}
+h2{
+    color: goldenrod;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
