@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="../css/index_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Estonia&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/djoias_styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Estonia&display=swap">
     <link rel="stylesheet" href="../css/cont_style.css">
+    <script>
+        function calc_total(){
+            var qtd = parseInt(document.getElementById('iQuantidade').value);
+            var tot = qtd * 1500;
+            document.getElementById('iValorTotal').value = tot;
+        }
+    </script>
+    
     <title>Design de Joias</title>
 </head>
 <body>
@@ -22,34 +29,87 @@
         <div id="menu">
         <a href="../html/index.html">Home</a> &nbsp;&nbsp;
         <a href="sobrenos.html">Sobre nós</a> &nbsp;&nbsp; 
-        <a href="djoias.html">Design de joias</a> &nbsp;&nbsp;
-        <a href="serv.html"> Serviços</a> &nbsp;&nbsp;
+        <a href="djoias.html">Nossos Serviços</a> &nbsp;&nbsp;
         <a href="cont.html">Contato</a>
         </div>
        </nave>
     </header>
     <br><br><br>
     <h2 id="h2cont">Entre em contato conosco</h2>
-    <form action="../php/cont.php" target="_blank" id="formcontato">
-        <label for="nome">Nome</label><br>
-        <input type="text" id="nome" name="nome"><br><br>
-        <label for="sobrenome">Sobrenome</label><br>
-        <input type="text" id="sobrenome" name="sobrenome"><br><br>
-        <label for="eMail">E-mail</label><br>
-        <input type="email" id="eMail" name="eMail"><br><br>
-        <label for="mensagem">Digite sua mensagem</label><br><br>
-        <textarea name="mensagem" cols="30" rows="10"></textarea><br><br>
-        <input type="button" value="Enviar">
-    </form>
-    <br><br><br>
-    <div id="chatbot">
-        <iframe
-    allow="microphone;"
-    width="350"
-    height="430"
-    src="https://console.dialogflow.com/api-client/demo/embedded/26302dcb-3939-4f93-be36-b41f215728c6">
-</iframe>
+   <form method="post" id="fContato" action="mailto:rodlenekristel@gmail.com" oninput="calc_total();">
+    <fieldset id="usuario">
+        <legend>Identificação do Usuário</legend>
+        <p><label for="iNome">Nome: </label><input type="text" name="nNome" id="iNome"/></p>
+        <p><label for="iSobrenome">Sobrenome: </label><input type="text" name="nSobrenome" id="iSobrenome"/></p>
+        <p><label for="iMail">E-mail: </label><input type="email" name="nMail" id="iMail"/></p>
+        <fieldset id="sexo">
+            <legend>Sexo:</legend>
+            <input type="radio" name="nSexo" id="iMasc" checked/><label for="iMasc"> Masculino</label><br>
+            <input type="radio" name="nSexo" id="iFem"/><label for="iFem"> Feminino</label>
+            <input type="datetime-local" hidden/> <!--informa a data do contato. Está oculto no formulário-->
+        </fieldset>
+    </fieldset>
+    <fieldset id="endereco">    
+            <legend>Endereço</legend>
+            <p><label>Logradouro: <input type="text" name="nLogradouro" id="iLogradouro" size="13" maxlength="80" placeholder="Rua, Av., etc." /></p></label>
+            <p><label>Número: <input type="number" name="nNumero" id="iNumero" min="0" max="99999" /></p></label>
+            <p><label for="iEstado">Estado:</label>
+            <select name="nEstado" id="iEstado">
+                <option>Acre</option>
+                <option>Alagoas</option>
+                <option>Amapá</option>
+                <option>Amazonas</option>
+                <option>Bahia</option>
+                <option>Ceará</option>
+                <option>Distrito Federal</option>
+                <option>Espírito Santo</option>
+                <option>Goiás</option>
+                <option>Maranhão</option>
+                <option>Mato Grosso</option>
+                <option>Mato Grosso do Sul</option>
+                <option>Minas Gerais</option>
+                <option>Pará</option>
+                <option>Paraíba</option>
+                <option>Paraná</option>
+                <option>Pernambuco</option>
+                <option>Piauí</option>
+                <option>Rio de Janeiro</option>
+                <option>Rio Grande do Norte</option>
+                <option>Rio Grande do Sul</option>
+                <option>Rondônia</option>
+                <option>Roraima</option>
+                <option>Santa Catarina</option>
+                <option selected>São Paulo</option>
+                <option>Sergipe</option>
+                <option>Tocantins</option>
+            </select></p>
+            <p><label for="iCidade">Cidade:</label>
+            <input type="text" name="nCidade" id="iCidade" maxlength="40" size="20" placeholder="Sua cidade"/></p>
+    </fieldset>
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+            <p><label for="iAssunto">Assunto: </label>
+            <input type="text" name="nAssunto" id="iAssunto"/></p>
+            <p><label for="iMensagem">Mensagem: </label>
+            <textarea name="nMensagem" id="iMensagem" cols="45" rows="5" placeholder="deixe aqui sua mensagem"></textarea></p>
+    </fieldset>
+    <fieldset id="pedido">
+        <legend>Orçamento de Serviços</legend>
+            <p><label for="iQuantidade">Quantidade: </label>
+            <input type="number" name="nQuantidade" id="iQuantidade"/></p>
+            <p><label for="iValorTotal">Valor total: R$</label>
+            <input type="text" name="nValorTotal" id="iValorTotal" readonly/></p>
+    </fieldset>
+    <br>
+    <div id="botao">
+        <input type="submit" value="Enviar"/>
     </div>
+    
+    </form>
+   
+    <footer>
+        <h6>Todos os direitos reservados &reg;</h6>
+    </footer>
     
       
 </body>
