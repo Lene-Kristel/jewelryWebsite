@@ -1,27 +1,82 @@
 @charset "UTH-8";
-body{
-    color: rgb(245, 245, 245,0.8);
-}
-figure.foto-legenda{
-    position: relative;
-    box-shadow: 4px 1px 4px gray;
-}
-figure.foto-legenda img{
-    width: 100%;
-    height: 100%;
-}
-figure.foto-legenda figcaption{
-    position: absolute;
-    top: 0;
-    padding: 15% 13%;
-    color: white;
-    font-size: 20px;
-    background-color: rgba(0,0,0,0.4);
-    width: 100%;
-    height: 100%;
-    box-sizing:border-box;
-}
-#djoias{
-    color: gray;
-}
 
+#menu{
+    padding-bottom: 20px;
+}
+h2{
+    margin-top: 40px;
+    color:goldenrod;
+    text-shadow: 1px 1px 1px balck;
+}
+ul#album-fotos{
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+}
+ul#album-fotos li{
+    float:left;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: solid 5px white;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    -webkit-transition: all 0.4s ease-in;
+}
+ul#album-fotos li span{
+    opacity: 0;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 20px;
+    line-height: 565px;
+    padding: 5px;
+}
+ul#album-fotos li:hover{
+    -webkit-transform: scale(1.5);
+}
+ul#album-fotos li:hover span{
+    opacity: 1;
+}
+ul#album-fotos li#foto01{
+    background: url("../img/jewelry3.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 600px 600px;
+    background-color: #FFFFFF;
+}
+ul#album-fotos li#foto01:hover{
+    background-position: 0px 0px;
+    background-size: 400px 400px;  
+}
+ul#album-fotos li#foto02{
+    background: url("../img/jewelry8.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 500px 500px;
+    background-color: #FFFFFF;
+}
+ul#album-fotos li#foto02:hover{
+    background-position: 0px 0px;
+    background-size: 300px 300px;
+}
+ul#album-fotos li#foto03{
+    background: url("../img/jewelry1.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 500px 500px;
+    background-color: #FFFFFF;
+}
+ul#album-fotos li#foto03:hover{
+    background-position: 0px 0px;
+    background-size: 300px 300px;
+}
+ul#album-fotos li#foto04{
+    background: url("../img/jewelry6.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 600px 600px;
+    background-color: #FFFFFF;
+}
+ul#album-fotos li#foto04:hover{
+    background-position: 0px 0px;
+    background-size: 300px 300px;
+}
